@@ -6,16 +6,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet:wght@100..400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <title>Birthday!</title>
     <style>
         :root {
-            --primary: #FBF3C1;
-            --secondary: #64E2B7;
-            --tertiary: #DC8BE0;
-            --last: #D50B8B;
-            --txtsize: 2.2vw;
+            --primary: #64A6BD;
+            --last: #ADA7C9;
+            --tertiary: #90A8C3;
+            --secondary: #F4CAE0;
+            --txtsize: 4vh;
             --fontfam: "Edu QLD Beginner";
+            --fontfam2: "Winky Rough";
 
         }
         body {
@@ -30,14 +31,14 @@
         }
         .main {
             background: linear-gradient(to top, var(--secondary) 0%, var(--primary) 100%);
-            height: 90vh;
-            border-bottom: .5vw solid black;
+            height: 70vh;
+            position: relative;
         }
         #cakeimg1 {
-            width: 85vh;
+            width: 40vw;
             position: absolute;
             right: -50vw;
-            bottom: 15vw;
+            top: 10vh;
             animation: cakeAnimation 4s ease-out .5s 1 forwards normal, cakeAnimation2 7s linear 4.45s infinite forwards alternate;
             animation-fill-mode: forwards;
         }
@@ -57,10 +58,9 @@
         }
 
         .block {
-            height: 30vw;
+            height: 70vh;
             font-size: var(--txtsize);
             margin-top: 5vw;
-            border-bottom: .5vw solid black;
             margin-left: 2vw;
             margin-right: 3vw;
             text-align: justify;
@@ -76,14 +76,15 @@
             margin-top: 1.5vw;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             border: .3vw solid var(--primary);
-            color: var(--last);
+            color: var(--primary);
             background-color: #fed2ff;
         }
         .question {
             margin-top: 5vw;
+            font-family: var(--fontfam2);
         }
         .btn:hover {
-            filter: hue-rotate(120deg) brightness(1.2);
+            filter: hue-rotate(100deg) brightness(0.95);
         }
 
         @keyframes cakeAnimation {
@@ -91,11 +92,11 @@
             100% {right: -5vw}
         }
         @keyframes cakeAnimation2 {
-            0% {right: -5vw; bottom: 15vw;}
-            25% {bottom: 14vw; right:-3vw}
-            50% {bottom: 15vw; right:-2vw}
-            75% {bottom: 13vw; right:-1vw}
-            100% {bottom: 12vw; right:-4vw}
+            0% {right: -5vw; top: 10vh;}
+            25% {top: 14vh; right:-3vw}
+            50% {top: 15vh; right:-2vw}
+            75% {top: 13vh; right:-1vw}
+            100% {top: 12vh; right:-4vw}
         }
     </style>
 </head>
@@ -106,7 +107,7 @@
         <p id="subheading">To the best, Mr. XY</p>
     </div>
     <div class="block">
-        <p style="margin-top: 15vw;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, doloribus culpa cum eligendi veritatis dolores odio. Error consectetur rerum qui, expedita pariatur at cumque asperiores. Veniam et, recusandae illo veritatis necessitatibus voluptatibus officiis magnam eius, corrupti odio magni adipisci. A, nesciunt amet ex quasi ducimus magni, rerum officiis illum nobis doloribus dolor exercitationem repellat veniam enim necessitatibus eaque corporis autem pariatur, tempora unde vel itaque voluptatem temporibus dolore. Consequatur aperiam dolorem ullam, accusantium pariatur, dolor excepturi nesciunt illum et, qui natus illo. Totam fuga quis, architecto facilis corrupti vero a quia perferendis at eligendi illum, sit, dolor ad quod molestiae?</p>
+        <p style="margin-top: 15vw; font-family: var(--fontfam2); height: 30vh; color: var(--primary);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, doloribus culpa cum eligendi veritatis dolores odio. Error consectetur rerum qui, expedita pariatur at cumque asperiores. Veniam et, recusandae illo veritatis necessitatibus voluptatibus officiis magnam eius, corrupti odio magni adipisci. A, nesciunt amet ex quasi ducimus magni, rerum officiis illum nobis doloribus dolor exercitationem repellat veniam enim necessitatibus eaque corporis autem pariatur, tempora unde vel itaque voluptatem temporibus dolore. Consequatur aperiam dolorem ullam, accusantium pariatur, dolor excepturi nesciunt illum et, qui natus illo. Totam fuga quis, architecto facilis corrupti vero a quia perferendis at eligendi illum, sit, dolor ad quod molestiae?</p>
     </div>
     <div class="block" style="height: 60vw;">
         <div class="question">
@@ -127,7 +128,7 @@
         </div>
     </div>
     <div class="block">
-        <p>HOW ABOUT A LITTLE GAME THIS TIME?</p>
+        <p style="font-family: 'Franklin Gothic Medium',sans-serif;">HOW ABOUT A LITTLE GAME THIS TIME?</p>
         <button class="btn" style="width: 40vw;"><a href="game.html" target="_blank" style="text-decoration: none;">Press the button to be redirected!</a></button>
     </div>
     <script>
