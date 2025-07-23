@@ -14,10 +14,9 @@
             --last: #ADA7C9;
             --tertiary: #90A8C3;
             --secondary: #F4CAE0;
-            --txtsize: 4vh;
-            --fontfam: "Edu QLD Beginner";
-            --fontfam2: "Winky Rough";
-
+            --txtsize: 2vw;
+            --fontfam: "Winky Rough";
+            --fontfam2: "Playwrite DK Loopet";
         }
         body {
             /* HIDE THE SCROLLBAR */
@@ -74,14 +73,14 @@
             height: 4vw;
             cursor: pointer;
             margin-top: 1.5vw;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-family: var(--fontfam);
             border: .3vw solid var(--primary);
             color: var(--primary);
             background-color: #fed2ff;
         }
         .question {
             margin-top: 5vw;
-            font-family: var(--fontfam2);
+            font-family: var(--fontfam);
         }
         .btn:hover {
             filter: hue-rotate(100deg) brightness(0.95);
@@ -107,7 +106,7 @@
         <p id="subheading">To the best, Mr. XY</p>
     </div>
     <div class="block">
-        <p style="margin-top: 15vw; font-family: var(--fontfam2); height: 30vh; color: var(--primary);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, doloribus culpa cum eligendi veritatis dolores odio. Error consectetur rerum qui, expedita pariatur at cumque asperiores. Veniam et, recusandae illo veritatis necessitatibus voluptatibus officiis magnam eius, corrupti odio magni adipisci. A, nesciunt amet ex quasi ducimus magni, rerum officiis illum nobis doloribus dolor exercitationem repellat veniam enim necessitatibus eaque corporis autem pariatur, tempora unde vel itaque voluptatem temporibus dolore. Consequatur aperiam dolorem ullam, accusantium pariatur, dolor excepturi nesciunt illum et, qui natus illo. Totam fuga quis, architecto facilis corrupti vero a quia perferendis at eligendi illum, sit, dolor ad quod molestiae?</p>
+        <p style="margin-top: 15vw; font-family: var(--fontfam); height: 30vh; color: var(--primary);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, doloribus culpa cum eligendi veritatis dolores odio. Error consectetur rerum qui, expedita pariatur at cumque asperiores. Veniam et, recusandae illo veritatis necessitatibus voluptatibus officiis magnam eius, corrupti odio magni adipisci. A, nesciunt amet ex quasi ducimus magni, rerum officiis illum nobis doloribus dolor exercitationem repellat veniam enim necessitatibus eaque corporis autem pariatur, tempora unde vel itaque voluptatem temporibus dolore. Consequatur aperiam dolorem ullam, accusantium pariatur, dolor excepturi nesciunt illum et, qui natus illo. Totam fuga quis, architecto facilis corrupti vero a quia perferendis at eligendi illum, sit, dolor ad quod molestiae?</p>
     </div>
     <div class="block" style="height: 60vw;">
         <div class="question">
@@ -123,24 +122,29 @@
             <button class="btn">Click to reveal answer~</button>
         </div>
         <div class="question">
-            <p>WHO DO YOU THINK THINKS ABOUT YOU THE MOST?</p>
+            <p>WHO THINKS ABOUT YOU THE MOST?</p>
             <button class="btn">Click to reveal answer~</button>
         </div>
     </div>
     <div class="block">
         <p style="font-family: 'Franklin Gothic Medium',sans-serif;">HOW ABOUT A LITTLE GAME THIS TIME?</p>
-        <button class="btn" style="width: 40vw;"><a href="game.html" target="_blank" style="text-decoration: none;">Press the button to be redirected!</a></button>
+        <button class="btn" style="width: 40vw; height: 10vw; font-family: var(--fontfam);">Press the button to be redirected!</a></button>
     </div>
     <script>
         let ansBtn = Array.from(document.getElementsByClassName("btn"))
-        const answerList = ["Will", "You", "Marry", "Me", "LET'S PLAY!"]
+        const answerList = ["Will", "You", "Marry", "Me", "LET'S PLAY! (Click again if nothing happens)"];
         for (let btn of ansBtn) {
             btn.addEventListener('click', function () {
                 const index = ansBtn.indexOf(this);
                 let x = ansBtn[index]
                 x.innerHTML = answerList[index]
                 x.style.filter = "hue-rotate(120deg) brightness(1.2)"
+                x.style.fontFamily = 'var(--fontfam2)'
                 x.style.cursor = "default"
+                if (index === 4) {
+                    x.style.fontFamily = 'var(--fontfam)'
+                    window.open("game.html", "_blank");
+                }
             });
         }
   

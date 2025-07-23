@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <title>GAME TIME!</title>
     <style>
         :root {
-            --primary: #FBF3C1;
-            --secondary: #64E2B7;
-            --tertiary: #DC8BE0;
-            --last: #D50B8B;
-            --txtsize: 2.2vw;
-            --txtsize2: 1.7vw;
-            --fontfam: "Edu QLD Beginner";
+            --primary: #64A6BD;
+            --secondary: #F4CAE0;
+            --last: #ADA7C9;
+            --tertiary: #90A8C3;
+            --txtsize: 2.5vw;
+            --txtsize2: 2vw;
+            --fontfam: "Winky Rough";
         }
         body {
             overflow-x: hidden;
@@ -24,13 +28,13 @@
             padding: 0;
         }
         #img {
-            width: 40vh;
+            width: 20vw;
         }
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 40vh;
+            height: 20vw;
         }
         .main {
             display: block;
@@ -41,10 +45,10 @@
         }
         #question {
             font-size: var(--txtsize);
-            font-family: var(--fontfam);
+            font-family: 'Verdana', sans-serif;
             text-align: justify;
             padding: 2%;
-            color: var(--primary);
+            color: var(--secondary);
         }
         .answers {
             display: flex;
@@ -68,8 +72,7 @@
             transition: background-color 0.3s ease;
         }
         .answer-block:hover {
-            background-color: var(--last);
-            color: var(--primary);
+            filter: contrast(1.5);
             transition: background-color 0.3s ease;
         }
     </style>
