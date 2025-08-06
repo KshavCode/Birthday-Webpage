@@ -49,6 +49,7 @@
             text-align: justify;
             padding: 2%;
             color: var(--secondary);
+            margin-top: 5vw;
         }
         .answers {
             display: flex;
@@ -76,7 +77,31 @@
             transition: background-color 0.3s ease;
         }
         @media screen and (max-width:768px) {
-            
+            #img {
+                width: 40vw;
+                margin-top: 30vw;
+            }
+            .main {
+                width: 90%;
+                margin-left: 5%;
+            }
+            #question {
+                font-size: 5vw;
+                margin-top: 35vw;
+                margin-bottom: 15vw;
+            }
+            .answers {
+                flex-direction: column;
+                align-items: center;
+                height: 30vw;
+                
+            }
+            .answer-block {
+                margin-bottom: 2vw;
+                width: 95%;
+                font-size: 5vw;
+                padding: 4%;
+            }
         }
         @media screen and (max-width: 425px) {
             #img {
@@ -90,17 +115,18 @@
             #question {
                 font-size: 6vw;
                 margin-top: 40vw;
+                margin-bottom: 15vw;
             }
             .answers {
-                margin-top: 10vw;
                 flex-direction: column;
                 align-items: center;
+                height: 50vw;
+                
             }
             .answer-block {
-                width: 90%;
-                margin-top: 5vw;
-                height: 60%;
-                font-size: 5vw;
+                width: 95%;
+                font-size: 6vw;
+                padding: 4%;
             }
         }
     </style>
@@ -120,7 +146,7 @@
     <script>
         let questions = [
             {
-                question: "On which year we met?",
+                question: "In which year we met?",
                 answers: ["December 2021", "December 2022"],
                 reason: ["Correct :D", "Didn't you know :0"],
                 correct: 0
@@ -188,6 +214,11 @@
                 buttonf.className = 'answer-block';
                 buttonf.style.cursor = "pointer";
                 if (screen.width <= 425) {
+                    buttonf.style.width = "90%";
+                    buttonf.style.height = "50vw";
+                    buttonf.style.fontSize = "5vw";
+                }
+                else if (screen.width <= 768) {
                     buttonf.style.width = "90%";
                     buttonf.style.height = "50vw";
                     buttonf.style.fontSize = "5vw";
@@ -266,5 +297,3 @@
 
 
 
-
-<!-- FIX THE WORKING OF ANSWER CHECKING AND PROVIDING THE REASONS -->
