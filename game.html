@@ -75,6 +75,34 @@
             filter: contrast(1.5);
             transition: background-color 0.3s ease;
         }
+        @media screen and (max-width:768px) {
+            
+        }
+        @media screen and (max-width: 425px) {
+            #img {
+                width: 50vw;
+                margin-top: 30vw;
+            }
+            .main {
+                width: 90%;
+                margin-left: 5%;
+            }
+            #question {
+                font-size: 6vw;
+                margin-top: 40vw;
+            }
+            .answers {
+                margin-top: 10vw;
+                flex-direction: column;
+                align-items: center;
+            }
+            .answer-block {
+                width: 90%;
+                margin-top: 5vw;
+                height: 60%;
+                font-size: 5vw;
+            }
+        }
     </style>
 </head>
 <body>
@@ -158,10 +186,17 @@
                 const buttonf = document.createElement('div');
                 let buttonclick = 1
                 buttonf.className = 'answer-block';
-                buttonf.style.width = "50%";
-                buttonf.style.height = "70%";
                 buttonf.style.cursor = "pointer";
-                buttonf.style.fontSize = "2vw";
+                if (screen.width <= 425) {
+                    buttonf.style.width = "90%";
+                    buttonf.style.height = "50vw";
+                    buttonf.style.fontSize = "5vw";
+                } else {
+                    buttonf.style.width = "50%";
+                    buttonf.style.height = "70%";
+                    buttonf.style.fontSize = "2vw";
+                }
+                
                 buttonf.textContent = `Don't click here :x`;
                 buttonf.onclick = () => {
                     if (buttonclick == 1) {
